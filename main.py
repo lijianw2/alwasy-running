@@ -30,7 +30,7 @@ def run():
     cmd = read_command(n)
     if cmd is None:
         print("cmd none. end of file")
-        return 0
+        return 1
     cmd = SETUPENV + cmd
     p = subprocess.Popen(cmd, shell=True)
     p.wait()
